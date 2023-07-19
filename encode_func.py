@@ -21,13 +21,22 @@ def encode(user_password):
         password_list.append(s)
         
     return password_list
-  
+
+#Justin Sui
+def decode(password):
+    count = 0
+    decoded_pass = ''
+    while count < len(password):
+        decoded_pass += str(int(password[count]) - 3)
+        count += 1
+    return decoded_pass
+      
     
 while True:
     menu()
     option = int(input('Please enter an option: '))
     if option ==1:
-        user_password = int(input('Please enter your password to encode:'))
+        user_password = int(input('Please enter your password to encode: ')) #Justin Sui (added a space)
         password = encode(user_password)        
         print('Your password has been encoded and stored!')
     elif option==2:
