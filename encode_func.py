@@ -21,7 +21,16 @@ def encode(user_password):
         password_list.append(s)
         
     return password_list
-  
+    
+#Justin Sui
+def decode(password):
+    count = 0
+    decoded_pass = ''
+    while count < len(password):
+        decoded_pass += str(int(password[count]) - 3)
+        count += 1
+    return decoded_pass
+        
     
 while True:
     menu()
